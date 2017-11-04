@@ -1,0 +1,12 @@
+<h1>Professors:</h1>
+{% if professor_list %}
+    <ul>
+    {% for professor in professor_list %}
+        <li><a href="/register/professor/{{ professor.id }}/">{{ professor.professor_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No professors are available.</p>
+{% endif %}
+
+<input type=button value="Back" onClick="javascript:history.go(-1);">

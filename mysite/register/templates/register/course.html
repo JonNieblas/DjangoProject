@@ -1,0 +1,12 @@
+<h1>Courses:</h1>
+{% if course_list %}
+    <ul>
+    {% for course in course_list %}
+        <li><a href="/register/course/{{ course.id }}/">{{ course.course_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No courses are available.</p>
+{% endif %}
+
+<input type=button value="Back" onClick="javascript:history.go(-1);">

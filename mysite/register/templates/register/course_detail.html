@@ -1,0 +1,7 @@
+<h1>{{ course.course_name }}</h1>
+<ul>
+    <strong>Sections:</strong>
+{% for section in course.section_set.all %}
+    <li>{{ section.section_name }}</li>
+{% endfor %}
+</ul>

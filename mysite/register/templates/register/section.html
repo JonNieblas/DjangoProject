@@ -1,0 +1,12 @@
+<h1>Sections:</h1>
+{% if section_list %}
+    <ul>
+    {% for section in section_list %}
+        <li><a href="/register/section/{{ section.id }}/">{{ section.section_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No sections are available.</p>
+{% endif %}
+
+<input type=button value="Back" onClick="javascript:history.go(-1);">
